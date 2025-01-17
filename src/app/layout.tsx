@@ -5,6 +5,7 @@ import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
 
+import Navbar from '@/components/Navbar/Navbar';
 import { siteConfig } from '@/constant/config';
 
 // !STARTERCONF Change these default meta
@@ -55,8 +56,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
-      <body>{children}</body>
+    <html lang="en">
+      <body>
+        <Navbar />
+        <main className="container mx-auto px-4 py-8">
+          {children}
+        </main>
+        <footer className="bg-gray-800 text-white py-4">
+          <div className="container mx-auto text-center">
+            <p className="text-sm">
+              © {new Date().getFullYear()} Lista de filmes. Todos os direitos reservados.
+            </p>
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }

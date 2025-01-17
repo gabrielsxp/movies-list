@@ -11,3 +11,8 @@ export function getFromSessionStorage(key: string): string | null {
   }
   return null;
 }
+
+export function transformDate(dateStr: string): string {
+  const [year, month, day] = dateStr.split('-');
+  return `${day}/${month}/${year}`;
+}
