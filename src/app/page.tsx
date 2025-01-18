@@ -1,10 +1,10 @@
+import Head from 'next/head';
+import { Suspense } from 'react';
+
 import HeroBanner from '@/components/HeroBanner/HeroBanner';
 import { MoviesCarousel } from '@/components/MoviesCarousel/MoviesCarousel';
 import { MoviesList } from '@/components/MoviesList/MoviesList';
 import Skeleton from '@/components/Skeleton/Skeleton';
-
-import Head from 'next/head';
-import { Suspense } from 'react';
 
 export default function HomePage({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
   const currentPage = searchParams.page ? parseInt(searchParams.page as string) : 1;

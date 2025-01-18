@@ -1,6 +1,7 @@
-import { IMovie } from '@/lib/api';
 import { StarIcon } from 'lucide-react';
 import Link from 'next/link';
+
+import { IMovie } from '@/lib/api';
 
 interface IMovieCard {
   movie: IMovie

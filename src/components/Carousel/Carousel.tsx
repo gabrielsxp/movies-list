@@ -27,7 +27,7 @@ const Carousel = ({ items }: ICarousel) => {
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [nextSlide]);
 
   return (
     <div className="relative w-full max-w-full mx-auto">

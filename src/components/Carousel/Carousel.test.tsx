@@ -1,5 +1,6 @@
 // Carousel.test.tsx
 import { act, fireEvent, render, screen } from '@testing-library/react';
+
 import Carousel from './Carousel';
 
 const mockItems = [

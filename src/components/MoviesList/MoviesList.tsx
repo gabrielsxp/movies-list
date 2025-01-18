@@ -1,6 +1,7 @@
+import { getMovies } from "@/lib/api";
+
 import MovieCard from "@/components/MovieCard/MovieCard";
 import Pagination from "@/components/Pagination/Pagination";
-import { getMovies } from "@/lib/api";
 
 interface IMoviesList {
   page: number;

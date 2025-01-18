@@ -1,5 +1,6 @@
 // HeroBanner.test.js
 import { render, screen } from '@testing-library/react';
+
 import HeroBanner from './HeroBanner';
 
 describe('HeroBanner', () => {

@@ -1,6 +1,8 @@
 // MovieCard.test.tsx
-import { IMovie } from '@/lib/api';
 import { render, screen } from '@testing-library/react';
+
+import { IMovie } from '@/lib/api';
+
 import MovieCard from './MovieCard';
 
 const mockMovie: IMovie = {

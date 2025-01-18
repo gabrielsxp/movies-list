@@ -1,9 +1,11 @@
 'use client';
 
-import SearchBar from '@/components/SearchBar/SearchBar';
-import { IMovie } from '@/lib/api';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+
+import { IMovie } from '@/lib/api';
+
+import SearchBar from '@/components/SearchBar/SearchBar';
 
 const Navbar = () => {
   const router = useRouter()

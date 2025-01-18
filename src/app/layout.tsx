@@ -6,6 +6,7 @@ import '@/styles/globals.css';
 import '@/styles/colors.css';
 
 import Navbar from '@/components/Navbar/Navbar';
+
 import { siteConfig } from '@/constant/config';
 
 // !STARTERCONF Change these default meta

@@ -1,6 +1,8 @@
-import { searchAction } from '@/app/actions/search';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
+import { searchAction } from '@/app/actions/search';
+
 import SearchBar from './SearchBar';
 
 jest.mock('@/app/actions/search', () => ({
@@ -9,7 +11,7 @@ jest.mock('@/app/actions/search', () => ({
 
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
-  useTransition: () => [false, (cb: Function) => cb()],
+  useTransition: () => [false, (cb: () => void) => cb()],
 }));
 
 describe('SearchBar', () => {

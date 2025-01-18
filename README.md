@@ -22,7 +22,7 @@ A web application for browsing and searching movies, built with Next.js and Reac
 ### Installation
 
 1. Clone the repository:
-git clone https://github.com/your-username/movies-app.git
+`git clone https://github.com/gabrielsxp/movies-list`
 2. Navigate to the project directory:
 3. Install dependencies using `yarn install` or `npm install`
 4. Create a `.env.local` file in the root directory and add your TMDB API key: `TMDB_API_KEY=your_api_key_here`
@@ -31,6 +31,11 @@ git clone https://github.com/your-username/movies-app.git
 
 To run the development server:
 `yarn dev` or `npm run dev`
+
+### Tests
+
+To run all tests:
+`yarn test`
 
 ## Technologies Used
 

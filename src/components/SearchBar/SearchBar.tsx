@@ -1,10 +1,12 @@
 'use client'
 
-import { searchAction } from '@/app/actions/search';
-import { IMovie } from '@/lib/api';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useRef, useState, useTransition } from 'react';
 import { useDebounce } from 'use-debounce';
+
+import { IMovie } from '@/lib/api';
+
+import { searchAction } from '@/app/actions/search';
 
 interface SearchBarProps {
   onSelect: (result: IMovie) => void;

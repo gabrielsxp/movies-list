@@ -1,6 +1,7 @@
+import Image from 'next/image';
+
 import { getMovieById } from '@/lib/api';
 import { transformDate } from '@/lib/helper';
-import Image from 'next/image';
 
 interface MoviePageProps {
   params: { id: string };
