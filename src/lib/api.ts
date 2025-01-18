@@ -46,7 +46,7 @@ export async function getMovies(page = 1): Promise<{ data: IMovie[], total_pages
   }
 }
 
-export async function getPopularMovies(page = 1): Promise<IMovie[]> {
+export async function getPopularMovies(page = 1): Promise<{linkDestination: string, image: string, title: string}[]> {
   const url = `https://api.themoviedb.org/3/movie/popular?language=pt-BR&page=${page}`;
   const options = {
     method: 'GET',
@@ -61,7 +61,11 @@ export async function getPopularMovies(page = 1): Promise<IMovie[]> {
     if (result.ok) {
       const data = await result.json();
 
-      return data.results
+      return data.results.map((movie: IMovie) => ({
+        linkDestination: `/movies/${movie.id}`, 
+        image: `https://image.tmdb.org/t/p/original/${movie.poster_path}`, 
+        title: movie.title
+      }))
     } else {
       throw new Error('Failed to fetch data')
     }

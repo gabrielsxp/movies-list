@@ -34,10 +34,10 @@ const Carousel = ({ items }: ICarousel) => {
       <div className="overflow-hidden relative h-64 rounded-lg">
         {items.map((item, index) => (
           <div
-          key={index}
-          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${
-            index === currentIndex ? 'opacity-100' : 'opacity-0'
-          }`}
+            key={`${item.title}-${item.linkDestination}`}
+            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${
+              index === currentIndex ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           <img
             src={item.image}
@@ -49,11 +49,11 @@ const Carousel = ({ items }: ICarousel) => {
             <h1 className="text-gray text-2xl font-semibold p-4 bg-gray-200/75 rounded-sm">
               {item.title}
             </h1>
-            {item.linkDestination && <Link href={items[index].linkDestination as string} className="bg-blue-500 hover:bg-blue-600 text-white text-center font-bold py-2 px-4 rounded transition duration-300">
+            {item.linkDestination && <Link href={items[currentIndex].linkDestination as string}
+              className="bg-blue-500 hover:bg-blue-600 text-white text-center font-bold py-2 px-4 rounded transition duration-300">
               Ver Detalhes
             </Link>}
           </div>
-
         </div>
         ))}
       </div>
@@ -69,7 +69,7 @@ const Carousel = ({ items }: ICarousel) => {
       >
         &#10095;
       </button>
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 items-center flex-wrap">
         {items.map((_: any, index: number) => (
           <button
             key={index}
