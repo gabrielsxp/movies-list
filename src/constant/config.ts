@@ -1,6 +1,6 @@
 export const siteConfig = {
-  title: 'Movies Listings',
+  title: 'Lista de Filmes',
   description:
-    'A movies listing app built with Next.js, Tailwind CSS, and TypeScript.',
+    'Uma listagem de filmes populares e bem avaliados',
   url: 'https://tsnext-tw.thcl.dev',
 };

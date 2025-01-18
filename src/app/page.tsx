@@ -1,7 +1,7 @@
 import HeroBanner from '@/components/HeroBanner/HeroBanner';
 import { MoviesCarousel } from '@/components/MoviesCarousel/MoviesCarousel';
 import { MoviesList } from '@/components/MoviesList/MoviesList';
-import Skeleton from '@/components/Skeleton';
+import Skeleton from '@/components/Skeleton/Skeleton';
 
 import Head from 'next/head';
 import { Suspense } from 'react';
@@ -11,7 +11,7 @@ export default function HomePage({ searchParams }: { searchParams: { [key: strin
   return (
     <main>
       <Head>
-        <title>Movies</title>
+        <title>Lista de Filmes</title>
       </Head>
       <HeroBanner backgroundImage='/images/main-bg.png' title='Seja bem vindo(a)!' subtitle='Navegue pelo nosso catálogo e descubra uma vasta seleção de filmes para todos os gostos.' />
       <Suspense fallback={<Skeleton />}>

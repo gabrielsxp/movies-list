@@ -3,8 +3,6 @@
 import * as React from 'react';
 import { RiAlarmWarningFill } from 'react-icons/ri';
 
-import TextButton from '@/components/buttons/TextButton';
-
 export default function Error({
   error,
   reset,
@@ -26,11 +24,8 @@ export default function Error({
             className='drop-shadow-glow animate-flicker text-red-500'
           />
           <h1 className='mt-8 text-4xl md:text-6xl'>
-            Oops, something went wrong!
+            Opa, alguma coisa deu errado! 
           </h1>
-          <TextButton variant='basic' onClick={reset} className='mt-4'>
-            Try again
-          </TextButton>
         </div>
       </section>
     </main>

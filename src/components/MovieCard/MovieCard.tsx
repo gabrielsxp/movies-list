@@ -13,7 +13,8 @@ const MovieCard = ({ movie }: IMovieCard) => {
         <img 
           src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
           alt={`${movie.title} poster`}
-          className="object-cover w-auto h-300"
+          className="object-cover w-full mx-auto"
+          style={{ height: '400px!important' }}
         />
       </div>
       <div className="p-4">
