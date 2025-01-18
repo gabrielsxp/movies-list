@@ -4,6 +4,9 @@
 
 A web application for browsing and searching movies, built with Next.js and React.
 
+## Live Version
+You can access a version of this project live in [Movies List](https://movies-list-ruddy.vercel.app)
+
 ## Features
 
 - 🎬 Responsive movie grid layout
