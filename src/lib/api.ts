@@ -17,13 +17,15 @@ export interface IMovie {
   genres?: IGenre[]
 }
 
+const apiKey = process.env.TMDB_API_KEY
+
 export async function getMovies(page = 1): Promise<{ data: IMovie[], total_pages: number }> {
   const url = `https://api.themoviedb.org/3/movie/top_rated?language=pt-BR&page=${page}`;
   const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMjRiYWRjOTk5MDNmMTBiMDZkYjc0YjViNjlmNDE1NiIsIm5iZiI6MTYxMDczODAyMC4yMDgsInN1YiI6IjYwMDFlOTY0MzI2YzE5MDAzZTgxZDM1OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.N7QSVrPaJBeAvJhlMAUis76MaiAkvChzcweTo06EGI4`
+      Authorization: `Bearer ${apiKey}`
     },
     next: {
       tags: ['getMovies']
@@ -50,7 +52,7 @@ export async function getPopularMovies(page = 1): Promise<IMovie[]> {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMjRiYWRjOTk5MDNmMTBiMDZkYjc0YjViNjlmNDE1NiIsIm5iZiI6MTYxMDczODAyMC4yMDgsInN1YiI6IjYwMDFlOTY0MzI2YzE5MDAzZTgxZDM1OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.N7QSVrPaJBeAvJhlMAUis76MaiAkvChzcweTo06EGI4`
+      Authorization: `Bearer ${apiKey}`
     }
   };
 
@@ -75,7 +77,7 @@ export async function getMovieById(id: string): Promise<IMovie> {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMjRiYWRjOTk5MDNmMTBiMDZkYjc0YjViNjlmNDE1NiIsIm5iZiI6MTYxMDczODAyMC4yMDgsInN1YiI6IjYwMDFlOTY0MzI2YzE5MDAzZTgxZDM1OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.N7QSVrPaJBeAvJhlMAUis76MaiAkvChzcweTo06EGI4`
+      Authorization: `Bearer ${apiKey}`
     }
   };
 
